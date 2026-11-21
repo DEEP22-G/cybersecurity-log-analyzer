@@ -1,14 +1,11 @@
-# Simple Security Log Analyzer
+with open("sample_logs.txt", "r") as file:
+    logs = file.readlines()
 
-logs = [
-    "Login successful",
-    "Login failed",
-    "Login failed",
-    "Login successful",
-    "Login failed"
-]
+failed_attempts = 0
 
-failed_attempts = logs.count("Login failed")
+for log in logs:
+    if log.strip().startswith("FAILED"):
+        failed_attempts += 1
 
 print("Security Log Analysis")
 print("Total log entries:", len(logs))
