@@ -1,0 +1,5 @@
+SUCCESS user1
+FAILED user2
+FAILED user3
+SUCCESS user4
+FAILED user2
